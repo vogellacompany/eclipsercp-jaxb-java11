@@ -3,12 +3,6 @@
 <target name="jaxbtarget">
 	<locations>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-			<repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20200529191137/repository"/>
-			<unit id="javax.xml.bind" version="2.2.0.v201105210648"/>
-			<unit id="javax.xml.stream" version="1.0.1.v201004272200"/>
-			<unit id="javax.activation" version="1.1.0.v201211130549"/>
-		</location>
-		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 			<repository location="http://download.eclipse.org/releases/2020-09"/>
 			<unit id="org.eclipse.sdk.feature.group" version="4.17.0.v20200708-1800"/>
 		</location>
@@ -16,5 +10,6 @@
 			<repository location="https://download.eclipse.org/rt/eclipselink/updates/"/>
 			<unit id="org.eclipse.persistence.sdk.feature.group" version="2.7.7.v20200504-69f2c2b80d"/>
 		</location>
+		<location path="/opt/git/eclipsercp-jaxb-java11/com.vogella.jaxb/libs" type="Directory"/>
 	</locations>
 </target>
