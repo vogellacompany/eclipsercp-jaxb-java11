@@ -19,6 +19,7 @@
       <plugin id="com.sun.jna"/>
       <plugin id="com.sun.jna.platform"/>
       <plugin id="com.vogella.jaxb"/>
+      <plugin id="com.vogella.jaxb.model"/>
       <plugin id="javax.activation"/>
       <plugin id="javax.annotation"/>
       <plugin id="javax.inject"/>

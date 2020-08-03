@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Model
+Bundle-SymbolicName: com.vogella.jaxb.model
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: VOGELLA
+Automatic-Module-Name: com.vogella.jaxb.model
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: javax.xml.bind;bundle-version="2.2.0"
+Export-Package: com.vogella.jaxb.model
+Import-Package: org.eclipse.persistence.jaxb;version="2.7.7"
