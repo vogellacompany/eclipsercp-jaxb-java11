@@ -8,7 +8,7 @@ To test:
 === Steps requires for setting up Jaxb with Java 11 and OSGi
 
 * Add JaxB api and implementation to target platform
-* Add `org.eclipse.persistence.jaxb` as imported package to the plug-in which uses JaxB
+* Add `org.eclipse.persistence.jaxb` as imported package to the plug-in which provides the JaxB classes
 * Add the following files to the data model package
 ** point to the JaxB provider via the following entry `javax.xml.bind.context.factory=org.eclipse.persistence.jaxb.JAXBContextFactory`
 ** Add `jaxb.index` with a line for each data model class name (without the packages).
