@@ -1,19 +1,23 @@
 == Example for using Eclipse RCP and JAXB with Java 11
 
-Currently not working.
+To test:
 
-To test, activate the jaxbtarget.target definition and start the application via the  com.vogella.jaxb.product.
+* activate the jaxbtarget.target definition
+* start the application via the  com.vogella.jaxb.product.
 
-Press the button called "Trigger JAXB"
+=== Steps requires for setting up Jaxb with Java 11 and OSGi
 
-Results in ClassNotFoundException
+* Add JaxB api and implementation to target platform
+* Add org.eclipse.persistence.jaxb as imported package to the plug-in which uses JaxB
+* Add the following files to the data model package
+** point to the JaxB provider via the following entry `javax.xml.bind.context.factory=org.eclipse.persistence.jaxb.JAXBContextFactory`
+** Add `jaxb.index` with a line for each data model class name (without the packages).
 
-aused by: java.lang.ClassNotFoundException: org.eclipse.persistence.jaxb.JAXBContextFactory
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
-	at org.eclipse.osgi.internal.framework.ContextFinder.loadClass(ContextFinder.java:147)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
-	at javax.xml.bind.ContextFinder.safeLoadClass(ContextFinder.java:480)
-	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:184)
-	... 29 more
+Example `jaxb.index`
+
+[source]
+----
+Bookstore
+Book
+----
+

@@ -74,7 +74,8 @@ public class SamplePart {
 		// create JAXB context and instantiate marshaller
 		JAXBContext context;
 		try {
-			context = JAXBContext.newInstance(Bookstore.class);
+			context = JAXBContext.newInstance(Bookstore.class.getPackageName(),
+					Bookstore.class.getClassLoader());
 			Marshaller m = context.createMarshaller();
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 
