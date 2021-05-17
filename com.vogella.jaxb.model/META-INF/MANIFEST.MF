@@ -6,6 +6,7 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: VOGELLA
 Automatic-Module-Name: com.vogella.jaxb.model
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Require-Bundle: javax.xml.bind;bundle-version="2.2.0"
 Export-Package: com.vogella.jaxb.model
-Import-Package: org.eclipse.persistence.jaxb;version="2.7.7"
+Import-Package: com.sun.xml.bind.v2;version="2.3.3",
+ javax.xml.bind;version="2.3.3",
+ javax.xml.bind.annotation;version="2.3.3"

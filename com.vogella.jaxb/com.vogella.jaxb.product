@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="com.vogella.jaxb" id="com.vogella.jaxb.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="true">
+<product name="com.vogella.jaxb" id="com.vogella.jaxb.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -20,12 +20,8 @@
       <plugin id="com.sun.jna.platform"/>
       <plugin id="com.vogella.jaxb"/>
       <plugin id="com.vogella.jaxb.model"/>
-      <plugin id="javax.activation"/>
       <plugin id="javax.annotation"/>
       <plugin id="javax.inject"/>
-      <plugin id="javax.xml"/>
-      <plugin id="javax.xml.bind"/>
-      <plugin id="javax.xml.stream"/>
       <plugin id="org.apache.batik.constants"/>
       <plugin id="org.apache.batik.css"/>
       <plugin id="org.apache.batik.i18n"/>
@@ -98,6 +94,13 @@
       <plugin id="org.w3c.dom.smil"/>
       <plugin id="org.w3c.dom.svg"/>
    </plugins>
+
+   <features>
+      <feature id="org.eclipse.e4.rcp" installMode="root"/>
+      <feature id="org.eclipse.emf.ecore" installMode="root"/>
+      <feature id="org.eclipse.emf.common" installMode="root"/>
+      <feature id="com.vogella.jaxb.feature" installMode="root"/>
+   </features>
 
 
 </product>
