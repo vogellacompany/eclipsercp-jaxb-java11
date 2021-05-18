@@ -7,6 +7,5 @@ Bundle-Vendor: VOGELLA
 Automatic-Module-Name: com.vogella.jaxb.model
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: com.vogella.jaxb.model
-Import-Package: com.sun.xml.bind.v2;version="2.3.3",
- javax.xml.bind;version="2.3.3",
- javax.xml.bind.annotation;version="2.3.3"
+Import-Package: jakarta.xml.bind;version="3.0.0",
+ jakarta.xml.bind.annotation;version="3.0.0"

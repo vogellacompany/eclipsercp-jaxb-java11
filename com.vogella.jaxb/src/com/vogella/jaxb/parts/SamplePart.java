@@ -7,10 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -22,6 +18,11 @@ import org.eclipse.swt.widgets.Composite;
 
 import com.vogella.jaxb.model.Book;
 import com.vogella.jaxb.model.Bookstore;
+
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.Unmarshaller;
 
 public class SamplePart {
 
@@ -74,8 +75,7 @@ public class SamplePart {
 		// create JAXB context and instantiate marshaller
 		JAXBContext context;
 		try {
-			context = JAXBContext.newInstance(Bookstore.class.getPackageName(),
-					Bookstore.class.getClassLoader());
+			context = JAXBContext.newInstance(Bookstore.class.getPackageName());
 			Marshaller m = context.createMarshaller();
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 
