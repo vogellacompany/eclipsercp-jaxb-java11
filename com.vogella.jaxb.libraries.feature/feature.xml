@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="com.vogella.jaxb.feature"
+      id="com.vogella.jaxb.libraries.feature"
       label="Feature"
       version="1.0.0.qualifier"
       provider-name="VOGELLA">
@@ -18,18 +18,32 @@
    </license>
 
    <plugin
-         id="com.vogella.jaxb"
+         id="jakarta.xml.bind-api"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="com.vogella.jaxb.model"
+         id="jaxb.impl.binding"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.sun.xml.bind.jaxb-impl"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
+   <plugin
+         id="com.sun.activation.jakarta.activation"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>
