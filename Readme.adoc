@@ -3,21 +3,52 @@
 To test:
 
 * activate the jaxbtarget.target definition
-* start the application via the  com.vogella.jaxb.product.
+* start the application via the  com.vogella.jaxb.product
 
-=== Steps requires for setting up Jaxb with Java 11 and OSGi
+See http://blog.vogella.com/2021/03/08/eclipse-rcp-java-11-jaxb/ for a detailed summary of possible approaches.
 
-* Add JaxB api and implementation to target platform
-* Add `org.eclipse.persistence.jaxb` as imported package to the plug-in which provides the JaxB classes
-* Add the following files to the data model package
-** point to the JaxB provider via the following entry `javax.xml.bind.context.factory=org.eclipse.persistence.jaxb.JAXBContextFactory`
-** Add `jaxb.index` with a line for each data model class name (without the packages).
+=== Steps used in this example for using Jaxb with Java 11 and OSGi
 
-Example `jaxb.index`
+* Created fragment which adds import com.sun.xml.bind.v2 to jakarta.xml.bind-api
+* Add dependency to JaxB implementation via Maven:
 
-[source]
-----
-Bookstore
-Book
-----
+````
+<groupId>com.sun.xml.bind</groupId>
+<artifactId>jaxb-impl</artifactId>
+<version>2.3.3</version>
+````
+
+* Created feature with the following content
+
+````
+<plugin
+         id="jakarta.xml.bind-api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="jaxb.impl.binding"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="com.sun.xml.bind.jaxb-impl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.sun.activation.jakarta.activation"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+````
+
 
