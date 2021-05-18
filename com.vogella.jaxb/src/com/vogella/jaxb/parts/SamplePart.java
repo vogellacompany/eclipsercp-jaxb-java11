@@ -43,6 +43,12 @@ public class SamplePart {
 				}
 			}
 		});
+		
+		try {
+			testJaxB();
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		}
 
 	}
 
@@ -74,8 +80,7 @@ public class SamplePart {
 		// create JAXB context and instantiate marshaller
 		JAXBContext context;
 		try {
-			context = JAXBContext.newInstance(Bookstore.class.getPackageName(),
-					Bookstore.class.getClassLoader());
+			context = JAXBContext.newInstance(Bookstore.class);
 			Marshaller m = context.createMarshaller();
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 

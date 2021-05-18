@@ -100,6 +100,7 @@
       <feature id="org.eclipse.emf.ecore" installMode="root"/>
       <feature id="org.eclipse.emf.common" installMode="root"/>
       <feature id="com.vogella.jaxb.feature" installMode="root"/>
+      <feature id="com.vogella.jaxb.libraries.feature" installMode="root"/>
    </features>
 
 
