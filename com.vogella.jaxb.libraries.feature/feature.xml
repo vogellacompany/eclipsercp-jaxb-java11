@@ -33,14 +33,14 @@
          unpack="false"/>
 
    <plugin
-         id="com.sun.xml.bind.jaxb-impl"
+         id="com.sun.activation.jakarta.activation"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="com.sun.activation.jakarta.activation"
+         id="wrapped.javax.activation.activation"
          download-size="0"
          install-size="0"
          version="0.0.0"
